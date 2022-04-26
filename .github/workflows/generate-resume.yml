@@ -11,9 +11,6 @@ jobs:
       - name: Get current date
         id: date
         run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
-      - name: Get current date & time
-        id: datetime
-        run: echo "::set-output name=date::$(date +'%Y-%m-%d %H:%M:%S')"
 
       - name: Get branch name
         id: branch-name
@@ -37,7 +34,7 @@ jobs:
         with:
           allowUpdates: true
           artifacts: "resume.pdf"
-          name: "${{ steps.datetime.outputs.date }} @ ${{ steps.branch-name.outputs.current_branch }}"
+          name: "${{ steps.date.outputs.date }} @ ${{ steps.branch-name.outputs.current_branch }}"
           omitBody: true
           tag: "${{ steps.branch-name.outputs.current_branch }}-${{ steps.date.outputs.date }}"
           token: ${{ secrets.GITHUB_TOKEN }}
