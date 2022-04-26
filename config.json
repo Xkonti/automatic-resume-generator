@@ -1,0 +1,13 @@
+{
+    "document_title": "Beniamin Dudek - Resume",
+    "marked_options": {
+        "gfm": true
+    },
+    "pdf_options": {
+        "format": "Letter",
+        "landscape": false,
+        "margin": "13mm 8mm",
+        "printBackground": true
+    },
+    "stylesheet": "resume-css-stylesheet.css"
+}
